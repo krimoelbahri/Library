@@ -1,0 +1,83 @@
+#booksContainer{
+    display: grid;
+    grid-template-columns:  repeat(4 , 1fr);
+    grid-gap: 10px;
+}
+.bookCard{
+    margin: 10px;
+    border: solid 1px;
+    height: 200px;
+    display: grid;
+    grid-template-rows: 40% 30% 15% 15%;
+}
+.cardTitle{
+    grid-row: 1/2;
+    margin: auto auto;
+}
+.cardAuthor{
+    grid-row: 2/3;
+    margin: auto auto;
+}
+.cardPages{
+    grid-row: 3/4;
+    margin: auto auto;
+}
+.cardFooter{
+    grid-row: 4/5;
+    margin: auto auto;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.cardRemove .readButton{
+    display: block;
+}
+
+.cardRemove{
+   float: right;
+}
+.readButton{
+    float: left;
+}
+.formContainer{
+    position: absolute;
+    left: 25%;
+    top: 10%;
+    width: 400px;
+    height: 250px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: honeydew;
+    display: none;
+    text-align: center;
+}
+input{
+    display: inline-block;
+    margin: 10px;
+    padding: 5px;
+    width: 70%;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+#read{
+    display: inline-block;
+    width: auto;
+    margin-top: 0;
+}
+#notRead{
+    display: inline-block;
+    width: auto;
+    margin-top: 0;
+}
+#submit{
+    position: absolute;
+    display: block;
+    bottom: 3%;
+    left: 45%;
+}
+#close{
+    position: absolute;
+    top: -5%;
+    right: -3%;
+    border-radius: 50%;
+    border: 1px solid grey;
+}

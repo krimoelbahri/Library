@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+    <button id="add">add book</button>
+    <div class="formContainer" id="formContainer">
+        <form name="submit" id="myForm">
+            <button id="close">x</button>
+            <input type="text" id="title" placeholder="Enter the title of the book " required>
+            <input type="text" id="author" placeholder="Enter the author of the book " required>
+            <input type="number" id="pages" placeholder="Number of pages  " required>
+            <p>Did you read the book?</p>
+            <label for="read">
+                <input type="radio" name="read" id="read" value="yes">Yes
+            </label>
+            <label for="notRead"> 
+                <input type="radio" name="read" id="notRead" value="no">No
+            </label>
+            <button type="submit" id="submit" >Submit</button>
+        </form>
+    </div>
+    <div id="booksContainer"></div>
+ 
+    <script src="script.js"></script>
+</body>
+</html>
