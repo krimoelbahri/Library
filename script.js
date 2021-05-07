@@ -19,17 +19,15 @@ const addBookToLibrary= function(e) {
     e.preventDefault();
     document.querySelector(".formContainer").style.display ="none";
     let title = document.getElementById('title').value;
-    console.log(title);
     let author = document.getElementById('author').value;
-    console.log(author);
     let pages= document.getElementById('pages').value;
-    console.log(pages);
     objName = new book(`${title}`,`${author}`,`${pages}`, 'Not read yet' );
     removeCards();
     myLibrary.push(objName);
     bookCardGenerator();
 }
 document.getElementById('myForm').addEventListener('submit', addBookToLibrary );
+
 const removeCards= function(){
     for(i=0; i<myLibrary.length;i++){
         cardstoremove= document.getElementById(`bookCard${i}`);
