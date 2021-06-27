@@ -31,14 +31,56 @@ add.addEventListener("click", function(){
 
 let myLibrary=JSON.parse(localStorage.getItem("library")) || [
 	{
-		title: "The Hobbit",
+		title: "The Hobbit1",
 		author: "John Ronald Reuel Tolkien",
 		pages: "288",
 		img:"images/the hobbit.jpeg",
 		read: false,
 	},
 	{
-		title: "The Alchemist",
+		title: "The Alchemist2",
+		author: "Paulo Coelho",
+		pages: "195",
+		img:"images/the alchemist.jpeg",
+		read: false,
+	},
+	{
+		title: "The Hobbit3",
+		author: "John Ronald Reuel Tolkien",
+		pages: "288",
+		img:"images/the hobbit.jpeg",
+		read: false,
+	},
+	{
+		title: "The Alchemist4",
+		author: "Paulo Coelho",
+		pages: "195",
+		img:"images/the alchemist.jpeg",
+		read: false,
+	},
+	{
+		title: "The Hobbit5",
+		author: "John Ronald Reuel Tolkien",
+		pages: "288",
+		img:"images/the hobbit.jpeg",
+		read: false,
+	},
+	{
+		title: "The Alchemist6",
+		author: "Paulo Coelho",
+		pages: "195",
+		img:"images/the alchemist.jpeg",
+		read: false,
+	},
+	{
+		title: "The Hobbit7",
+		author: "John Ronald Reuel Tolkien",
+		pages: "288",
+		img:"images/the hobbit.jpeg",
+		read: false,
+	},
+	{
+		title: "The Alchemist8",
 		author: "Paulo Coelho",
 		pages: "195",
 		img:"images/the alchemist.jpeg",
@@ -91,10 +133,12 @@ document.getElementById("myForm").addEventListener("submit", addBookToLibrary );
 
 const removeBookFromLibrary = function(e){
 	let j = e.target.dataset.index;
+	console.log(j);
 	removeCards();
 	myLibrary.splice(j,1);
-	localStorage.setItem("library",JSON.stringify(myLibrary));
+	console.log(myLibrary);
 	bookCardGenerator();
+	//localStorage.setItem("library",JSON.stringify(myLibrary));
 };
 const toggleRead= function(e){
 	let j = e.target.dataset.index;
@@ -163,10 +207,9 @@ const bookCardGenerator= function(){
 		bookCard.appendChild(cardFooter);
 		//remove button
 		cardRemove.classList.add("cardRemove");
-		cardRemove.setAttribute("data-index",`${i}`);
 		cardFooter.appendChild(cardRemove);
 		cardRemove.addEventListener("click", removeBookFromLibrary);
-		cardRemove.innerHTML= `<img id="delete" src="images/delete.png"  alt="Del">
+		cardRemove.innerHTML= `<img id="delete" data-index="${i}" src="images/delete.png"  alt="Del">
         `;
 		//read button
 		readButton.setAttribute("id",`readButton${i}`);
