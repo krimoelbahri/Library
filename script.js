@@ -103,6 +103,7 @@ const toggleRead= function(e){
 	}else{
 		myLibrary[j].read= true;
 	}
+	localStorage.setItem("library",JSON.stringify(myLibrary));
 	removeCards();
 	bookCardGenerator();
 };
