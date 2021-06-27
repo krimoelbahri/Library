@@ -4,29 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="main.css">
     <title>Document</title>
 </head>
 <body>
-    <button id="add">add book</button>
-    <div class="formContainer" id="formContainer">
-        <form name="submit" id="myForm">
-            <button id="close">x</button>
-            <input type="text" id="title" placeholder="Enter the title of the book " required>
-            <input type="text" id="author" placeholder="Enter the author of the book " required>
-            <input type="number" id="pages" placeholder="Number of pages  " required>
-            <p>Did you read the book?</p>
-            <label for="read">
-                <input type="radio" name="read" id="read" value="yes">Yes
-            </label>
-            <label for="notRead"> 
-                <input type="radio" name="read" id="notRead" value="no">No
-            </label>
-            <button type="submit" id="submit" >Submit</button>
-        </form>
+    <header>
+        <h1>Library</h1>
+    </header>
+    <div id="mainContent">
+        <button id="add">+</button>
+        <div class="formContainer" id="formContainer">
+            <form name="submit" id="myForm">
+                <input type="text" id="title" placeholder="Enter the title of the book " required>
+                <input type="text" id="author" placeholder="Enter the author of the book " required>
+                <input type="text" id="img" placeholder="Enter the URL for the book cover img ">
+                <input type="number" id="pages" placeholder="Number of pages  " required>
+                <div id="readDiv">
+                    <p>Did you read the book?</p>
+                    <label for="read">
+                        <input type="radio" name="read" id="read" value="yes" checked>Yes
+                    </label>
+                    <label for="notRead"> 
+                        <input type="radio" name="read" id="notRead" value="no">No
+                    </label>
+                </div>
+                <button type="submit" id="submit" >Submit</button>
+            </form>
+        </div>
+        <div id="booksContainer"></div>
     </div>
-    <div id="booksContainer"></div>
- 
+    <footer>
+        <p>Copyright © Created by <a href=https://github.com/krimoelbahri> Elbahri </a>. TOP project</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
