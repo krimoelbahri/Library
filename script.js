@@ -31,14 +31,14 @@ add.addEventListener("click", function(){
 
 let myLibrary=JSON.parse(localStorage.getItem("library")) || [
 	{
-		title: "The Hobbit1",
+		title: "The Hobbit",
 		author: "John Ronald Reuel Tolkien",
 		pages: "288",
 		img:"images/the hobbit.jpeg",
 		read: false,
 	},
 	{
-		title: "The Alchemist2",
+		title: "The Alchemist",
 		author: "Paulo Coelho",
 		pages: "195",
 		img:"images/the alchemist.jpeg",
