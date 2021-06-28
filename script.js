@@ -43,48 +43,6 @@ let myLibrary=JSON.parse(localStorage.getItem("library")) || [
 		pages: "195",
 		img:"images/the alchemist.jpeg",
 		read: false,
-	},
-	{
-		title: "The Hobbit3",
-		author: "John Ronald Reuel Tolkien",
-		pages: "288",
-		img:"images/the hobbit.jpeg",
-		read: false,
-	},
-	{
-		title: "The Alchemist4",
-		author: "Paulo Coelho",
-		pages: "195",
-		img:"images/the alchemist.jpeg",
-		read: false,
-	},
-	{
-		title: "The Hobbit5",
-		author: "John Ronald Reuel Tolkien",
-		pages: "288",
-		img:"images/the hobbit.jpeg",
-		read: false,
-	},
-	{
-		title: "The Alchemist6",
-		author: "Paulo Coelho",
-		pages: "195",
-		img:"images/the alchemist.jpeg",
-		read: false,
-	},
-	{
-		title: "The Hobbit7",
-		author: "John Ronald Reuel Tolkien",
-		pages: "288",
-		img:"images/the hobbit.jpeg",
-		read: false,
-	},
-	{
-		title: "The Alchemist8",
-		author: "Paulo Coelho",
-		pages: "195",
-		img:"images/the alchemist.jpeg",
-		read: false,
 	}
 ];
 
@@ -136,9 +94,8 @@ const removeBookFromLibrary = function(e){
 	console.log(j);
 	removeCards();
 	myLibrary.splice(j,1);
-	console.log(myLibrary);
+	localStorage.setItem("library",JSON.stringify(myLibrary));
 	bookCardGenerator();
-	//localStorage.setItem("library",JSON.stringify(myLibrary));
 };
 const toggleRead= function(e){
 	let j = e.target.dataset.index;
