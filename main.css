@@ -1,128 +1,144 @@
 html {
-  color: #ffbd9b;
-  width: 100%;
-  height: 100%;
+	color: #ffbd9b;
+	width: 100%;
+	height: 100%;
 }
 body {
-  display: grid;
-  grid-template-rows: 70px 1fr 50px;
-  width: 100%;
-  height: 100%;
-  background-color: #ffeedb;
+	display: grid;
+	grid-template-rows: 70px 1fr 50px;
+	width: 100%;
+	height: 100%;
+	background-color: #ffeedb;
 }
 header,
 footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #0a1d37;
-  background-color: #ffbd9b;
-  font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #0a1d37;
+	background-color: #ffbd9b;
+	font-weight: bold;
 }
 input {
-  margin: 5px;
-  padding: 5px;
-  width: 70%;
-  border: 1px solid grey;
-  border-radius: 5px;
+	margin: 5px;
+	padding: 5px;
+	width: 70%;
+	border: 1px solid grey;
+	border-radius: 5px;
 }
 h1 {
-  font-size: xx-large;
-  font-weight: bolder;
-  font-style: italic;
+	font-size: xx-large;
+	font-weight: bolder;
+	font-style: italic;
 }
 
 .bookCard {
-  margin: 5px auto;
-  border: 2px solid #ffbd9b;
-  height: 300px;
-  width: 75%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center;
-  background-color: #0a1d37;
+	margin: 5px auto;
+	border: 2px solid #ffbd9b;
+	height: 300px;
+	width: 75%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	text-align: center;
+	background-color: #0a1d37;
 }
 
 .cardFooter {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 80%;
-  justify-content: space-evenly;
-  background-color: #ffeedb;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 80%;
+	justify-content: space-evenly;
+	background-color: #ffeedb;
 }
 
 .formContainer {
-  width: 70%;
-  border: 1px solid #ffbd9b;
-  border-radius: 5px;
-  background-color: #0a1d37;
-  display: none;
-  flex-direction: column;
-  justify-content: center;
+	width: 70%;
+	border: 1px solid #ffbd9b;
+	border-radius: 5px;
+	background-color: #0a1d37;
+	display: none;
+	flex-direction: column;
+	justify-content: center;
 }
 .cardRemove {
-  width: 15%;
-  height: 80%;
-  background-color: transparent;
+	width: 15%;
+	height: 80%;
+	background-color: transparent;
 }
 .bookCover {
-  width: 70%;
-  height: 50%;
+	width: 70%;
+	height: 50%;
 }
 .bookImg {
-  width: 70%;
-  height: 100%;
+	width: 70%;
+	height: 100%;
 }
 
 #mainContent {
-  margin: 25px auto;
-  display: flex;
-  width: 80%;
-  height: 95%;
-  flex-direction: column;
-  align-items: center;
-  align-content: center;
-  justify-content: flex-start;
+	margin: 25px auto;
+	display: flex;
+	width: 80%;
+	height: 95%;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	justify-content: flex-start;
 }
 #booksContainer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  width: 95%;
+	display: grid;
 }
 #myForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  margin: 5px auto;
-  width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	margin: 5px auto;
+	width: 100%;
 }
 #readDiv {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 70%;
-  text-align: center;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+	width: 70%;
+	text-align: center;
 }
 #add {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  border: 2px solid #ffbd9b;
-  background-color: #0a1d37;
-  color: #ffbd9b;
-  width: 40px;
-  height: 40px;
-  font-size: 50px;
-  font-weight: bolder;
-  cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	border: 2px solid #ffbd9b;
+	background-color: #0a1d37;
+	color: #ffbd9b;
+	width: 40px;
+	height: 40px;
+	font-size: 50px;
+	font-weight: bolder;
+	cursor: pointer;
 }
 #delete {
-  width: 100%;
-  height: 100%;
+	width: 100%;
+	height: 100%;
+}
+@media (max-width: 600px) {
+	#booksContainer {
+		grid-template-columns: repeat(1, 1fr);
+		width: 75%;
+	}
+}
+@media (min-width: 601px) {
+	#booksContainer {
+		grid-template-columns: repeat(2, 1fr);
+		width: 75%;
+	}
+}
+@media (min-width: 1000px) {
+	#booksContainer {
+		grid-template-columns: repeat(3, 1fr);
+		width: 95%;
+	}
 }
